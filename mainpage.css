@@ -1,0 +1,23 @@
+    .vertical-center {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        /* align the inline(-block) elements horizontally */
+    }
+    
+    .jumbotron {
+        padding-bottom: 0px !important;
+        margin-bottom: 0px !important;
+    }
+    
+    .backgroundimage {
+        background-image: url('css/images/testpicture.jpg');
+        background-attachment:fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-height: 100vh;
+        width: 100%;
+        z-index: 1;
+    }

@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vincent Song | Developer | Designer | Student </title>
+    <script src="js/jquery-2.1.1.js" type="text/javascript"></script>
+    <script src="js/typed.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Hind:500|Bitter' rel='stylesheet' type='text/css'>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- jQuery library -->
+    <link rel="icon" type="image/png" href="css/images/browserpic.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="css/images/browserpic.png" sizes="32x32">
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" type="text/css" href="css/main.css"></link>
+    <script>
+    $(document).ready(function () {
+            // cache the window object
+            $window = $(window);
+
+            $('section[data-type="background"]').each(function () {
+                // declare the variable to affect the defined data-type
+                var $scroll = $(this);
+
+                $(window).scroll(function () {
+                    // HTML5 proves useful for helping with creating JS functions!
+                    // also, negative value because we're scrolling upwards                             
+                    var yPos = -($window.scrollTop() / $scroll.data('speed'));
+
+                    // background position
+                    var coords = '50% ' + yPos + 'px';
+
+                    // move the background
+                    $scroll.css({
+                        backgroundPosition: coords
+                    });
+                }); // end window scroll
+            }); // end section function
+        }); // close out script
+    </script>
+    <script>
+    $(function () {
+        $("#typed").typed({
+            strings: ["Typed.js is a <strong>jQuery</strong> plugin.", "It <em>types</em> out sentences.", "And then deletes them.", "Try it out!"],
+            stringsElement: $('#typed-strings'),
+            typeSpeed: 30,
+            backDelay: 600,
+            loop: false,
+                contentType: 'html', // or text
+                // defaults to false for infinite loop
+                loopCount: false,
+                callback: function () {
+                    foo();
+                },
+                resetCallback: function () {
+                    newTyped();
+                }
+            });
+
+        $(".reset").click(function () {
+            $("#typed").typed('reset');
+        });
+
+    });
+
+function newTyped() { /* A new typed object */ }
+
+function foo() {
+    console.log("Callback");
+}
+</script>
+</head>
+
+<body>
+
+    <section class="firstbackground inner">
+        <section class="logo animated fadeInDown">
+        </section>
+        <div class="container fixedDiv">
+            <div class="row">
+                <div class="col-sm-8- col-sm-offset fixedDiv">
+                    <img class="picture img-circle animated fadeInUp fixedText" src="images/profilepicture2.jpg"  />
+                    <br/>
+                    <br/>
+                    <div id="typed-strings">
+                        <p>a developer</p>
+                        <p>a student</p>
+                        <p>a hackathon <br/> organizer</p>
+                        <p>Vincent.</p>
+                    </div>
+                    <h1 class="hello animated fadeInUp fontBitter ">Hi, I'm <span id="typed"  style="white-space:pre;"></span></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <header class="jumbotron vertical-center" style="background-color:white;">
+        <h1 class="fontBitter"> About me</h1>
+        <hr width="60%">
+        <div class="container">
+            <p class="smallgraytext"> Computer science major with a data science specialization at the University of Maryland. Lover of nice watches, web development, and hackathons. Looking for internships or similar opportunites. Contact me <a href="#contact">here</a>.
+        </div>
+
+    </header>
+    <div class="jumbotron vertical-center" style="background-color:#FDFDFD;">
+        <h1 class="fontBitter"> Relevant Skills </h1>
+        <hr width="60%">
+        <br/>
+        <p class="text-center"> </p>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <i class="fa fa-laptop fa-4x"></i>
+                    <hr width="60%">
+                    <p>C#/ASP.NET/SQL</p>
+                    <p>Java</p>
+                    <p>Python</p>
+                </div>
+                <div class="col-sm-4">
+                    <i class="fa fa-code fa-4x"></i>
+                    <hr width="60%">
+                    <p>Django</p>
+                    <p>HTML/CSS/Javascript/JQuery</p>
+                    <p>Bootstrap</p>
+                </div>
+                <div class="col-sm-4">
+                    <i class="fa fa-mobile fa-4x"></i>
+                    <hr width="60%">
+                    <p>Android</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="jumbotron vertical-center" style="background-color:black">
+        <h1 class="fontBitter fontGray"> Get in touch </h1>
+        <hr width="60%">
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-2 ">
+
+                <p class="text-center"> </p>
+                <div class="container">
+                    <div class="container">
+                        <p class="fontBitter fontGray"><b>Here's my <a href="https://www.dropbox.com/s/4cekwybks4cdp05/Resume.pdf?dl=0">resume.</a> Or, shoot me an email. I'll be sure to reply quickly.</b>
+                        </p>
+                    </div>
+                    <p class="fontBitter fontBlue"><i class="fa fa-envelope fa-x padding"></i><a href="mailto:vincentwsong@gmail.com">vincentwsong@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <br/>
+                <p class="fontBitter fontGray">
+                    or, find me on any of these networks.
+                </p>
+                <a href="https://www.linkedin.com/in/vincent-song-a78b54b8"><i class="fa fa-linkedin fa-3x padding"></i></a>
+                <a href="http://www.github.com/vwsong"><i class="fa fa-github fa-3x padding"></i></a>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-2">
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <br/>
+    <p class="text-center fontGray fontBitter">©2015 Vincent Song. All Rights Reserved.</p>
+    <br/>
+</footer>
+
+</html>
